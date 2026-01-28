@@ -459,3 +459,67 @@ input::placeholder{ color: rgba(238,242,255,.45); }
 @media (max-width: 520px){
   .two{ grid-template-columns: 1fr; }
 }
+/* ===== Chatbot Widget ===== */
+.chat-toggle{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: linear-gradient(135deg, #6d5cff, #32d0ff);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  z-index: 9999;
+}
+
+.chat-panel{
+  position: fixed;
+  right: 18px;
+  bottom: 86px;
+  width: min(380px, calc(100vw - 36px));
+  height: 520px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(14,22,48,.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+  overflow: hidden;
+  display: none;
+  z-index: 9999;
+}
+
+.chat-panel.show{ display: block; }
+
+.chat-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.chat-title{ font-weight: 900; }
+.chat-subtitle{ font-size: 12px; color: rgba(255,255,255,.65); margin-top: 2px; }
+
+.chat-close{
+  border: 1px solid rgba(255,255,255,.14);
+  background: transparent;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.chat-iframe{
+  width: 100%;
+  height: calc(100% - 54px);
+  border: 0;
+  background: transparent;
+}
+

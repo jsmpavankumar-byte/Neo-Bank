@@ -415,6 +415,24 @@
     </div>
   </section>
 
-  <script src="app.js"></script>
+<!-- Chatbot Floating Button + Panel -->
+<button id="chatToggle" class="chat-toggle" aria-label="Open chat">💬</button>
+
+<div id="chatPanel" class="chat-panel" aria-hidden="true">
+  <div class="chat-header">
+    <div>
+      <div class="chat-title">NeoBank Assistant</div>
+      <div class="chat-subtitle">Online • Typical reply in minutes</div>
+    </div>
+    <button id="chatClose" class="chat-close" aria-label="Close chat">✕</button>
+  </div>
+
+  <iframe
+    class="chat-iframe"
+    allow="microphone"
+    src="https://console.dialogflow.com/api-client/demo/embedded/71787914-fead-4dd9-bf66-9f8d4d066553">
+  </iframe>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
