@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeoBank — Digital Banking</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar__row">
+      <div class="brand">
+        <div class="brand__logo">N</div>
+        <div>
+          <div class="brand__name">NeoBank</div>
+          <div class="brand__tag">Digital Banking • Payments • Cards</div>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a href="#products">Products</a>
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="#support">Support</a>
+        <button class="btn btn--ghost" id="openLoginBtn">Login</button>
+        <button class="btn btn--primary" id="openLoginBtn2">Open Account</button>
+      </nav>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav">
+      <a href="#products">Products</a>
+      <a href="#features">Features</a>
+      <a href="#security">Security</a>
+      <a href="#support">Support</a>
+      <button class="btn btn--ghost" id="openLoginBtnMobile">Login</button>
+      <button class="btn btn--primary" id="openLoginBtnMobile2">Open Account</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="chip">Trusted Digital Banking Experience</div>
+          <h1>Banking that feels premium, secure, and effortless.</h1>
+          <p class="muted">
+            Manage savings & checking, transfer instantly, view transactions, and track spending—
+            all in one modern dashboard.
+          </p>
+
+          <div class="hero__cta">
+            <button class="btn btn--primary" id="openLoginBtnHero">Get Started</button>
+            <a class="btn btn--ghost" href="#products">Explore Products</a>
+          </div>
+
+          <div class="trustbar">
+            <div class="trust">
+              <div class="trust__dot"></div>
+              <div>
+                <div class="trust__title">Secure</div>
+                <div class="trust__sub muted">Encryption + session controls</div>
+              </div>
+            </div>
+            <div class="trust">
+              <div class="trust__dot"></div>
+              <div>
+                <div class="trust__title">24×7 Support</div>
+                <div class="trust__sub muted">Chat & email assistance</div>
+              </div>
+            </div>
+            <div class="trust">
+              <div class="trust__dot"></div>
+              <div>
+                <div class="trust__title">Fast Transfers</div>
+                <div class="trust__sub muted">Instant internal transfers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="hero__image card">
+            <img
+              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=80"
+              alt="Banking app on a phone"
+            />
+            <div class="hero__overlay">
+              <div class="overlay__title">NeoBank App</div>
+              <div class="overlay__sub muted">Modern UI • Simple finance</div>
+            </div>
+          </div>
+
+          <div class="miniDash card">
+            <div class="miniDash__top">
+              <div>
+                <div class="muted small">Total Balance</div>
+                <div class="big">₹ <span id="landingTotal">—</span></div>
+              </div>
+              <div class="badge">LIVE DEMO</div>
+            </div>
+
+            <div class="miniDash__grid">
+              <div class="miniCard">
+                <div class="muted small">Savings</div>
+                <div class="mid">₹ <span id="landingSavings">—</span></div>
+              </div>
+              <div class="miniCard">
+                <div class="muted small">Checking</div>
+                <div class="mid">₹ <span id="landingChecking">—</span></div>
+              </div>
+            </div>
+
+            <div class="miniDash__hint muted small">
+              Login to access dashboard & transfers (demo).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+      <div class="container">
+        <div class="section__top">
+          <h2>Products designed for real life</h2>
+          <p class="muted">Cards, savings, and everyday payments—built for speed and control.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="product card">
+            <img
+              src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&w=1400&q=80"
+              alt="Bank card"
+              class="product__img"
+            />
+            <h3>NeoCard</h3>
+            <p class="muted">Contactless card with spending limits and instant freeze/unfreeze (demo UI).</p>
+            <div class="product__meta">
+              <span class="pill">Instant Controls</span>
+              <span class="pill">Rewards</span>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80"
+              alt="Savings and finance"
+              class="product__img"
+            />
+            <h3>Savings+</h3>
+            <p class="muted">Better saving habits with goals and smart reminders (demo UI).</p>
+            <div class="product__meta">
+              <span class="pill">Goals</span>
+              <span class="pill">Insights</span>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img
+              src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?auto=format&fit=crop&w=1400&q=80"
+              alt="Payments at a store"
+              class="product__img"
+            />
+            <h3>Payments</h3>
+            <p class="muted">Quick transfers and transaction tracking for daily spending (demo UI).</p>
+            <div class="product__meta">
+              <span class="pill">Fast Transfers</span>
+              <span class="pill">History</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section section--alt">
+      <div class="container">
+        <div class="section__top">
+          <h2>Everything you need in one place</h2>
+          <p class="muted">A clean dashboard that feels like a real banking product.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card feature">
+            <div class="icon">📊</div>
+            <div>
+              <h3>Account Overview</h3>
+              <p class="muted">Balances, account split, and activity — clearly presented.</p>
+            </div>
+          </div>
+          <div class="card feature">
+            <div class="icon">⚡</div>
+            <div>
+              <h3>Instant Transfers</h3>
+              <p class="muted">Move money between accounts with validations + logs.</p>
+            </div>
+          </div>
+          <div class="card feature">
+            <div class="icon">🧾</div>
+            <div>
+              <h3>Transaction History</h3>
+              <p class="muted">Search and filter credits, debits, transfers.</p>
+            </div>
+          </div>
+          <div class="card feature">
+            <div class="icon">🔒</div>
+            <div>
+              <h3>Security UX</h3>
+              <p class="muted">Safe patterns. Real app needs backend auth + server checks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section id="security" class="section">
+      <div class="container">
+        <div class="section__top">
+          <h2>Security-first by design</h2>
+          <p class="muted">This project is a frontend demo; you can extend it to a real backend.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Session Controls</h3>
+            <p class="muted">Login-gated dashboard + logout. Add JWT/OTP for real use.</p>
+          </div>
+          <div class="card">
+            <h3>Data Validation</h3>
+            <p class="muted">Client-side validation added. Always validate again on the server.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section id="support" class="section section--alt">
+      <div class="container">
+        <div class="section__top">
+          <h2>Support</h2>
+          <p class="muted">Demo support contact (replace with real).</p>
+        </div>
+
+        <div class="card supportCard">
+          <div>
+            <h3>Help Center</h3>
+            <p class="muted">Email: support@neobank.demo • Chat: Coming soon</p>
+          </div>
+          <div class="supportCard__right">
+            <div class="pill">SLA: 24 hrs</div>
+            <div class="pill">Priority Support</div>
+          </div>
+        </div>
+
+        <footer class="footer muted">
+          © <span id="year"></span> NeoBank. Frontend demo UI only.
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal__overlay" id="closeOverlay"></div>
+    <div class="modal__content card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <div class="modal__header">
+        <div>
+          <div class="muted small">Welcome back</div>
+          <h3 id="loginTitle">Login to NeoBank</h3>
+        </div>
+        <button class="iconBtn" id="closeLoginBtn" aria-label="Close">✕</button>
+      </div>
+
+      <form id="loginForm" class="form">
+        <label>
+          <span>Email</span>
+          <input type="email" id="email" placeholder="demo@neobank.com" required />
+        </label>
+
+        <label>
+          <span>Password</span>
+          <input type="password" id="password" placeholder="Use: demo123" required minlength="6" />
+        </label>
+
+        <div class="row">
+          <label class="check">
+            <input type="checkbox" id="remember"/>
+            <span>Remember me</span>
+          </label>
+          <a class="link" href="#" onclick="return false;">Forgot password?</a>
+        </div>
+
+        <button class="btn btn--primary" type="submit">Login</button>
+        <p class="muted small">Demo login: <b>demo@neobank.com</b> / <b>demo123</b></p>
+        <p class="error" id="loginError" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD (hidden until login) -->
+  <section class="dashboard" id="dashboard" hidden>
+    <div class="container">
+      <div class="dashTop">
+        <div>
+          <h2 class="dashTitle">Dashboard</h2>
+          <p class="muted">Welcome, <span id="userName">Pavan</span> — demo transactions only.</p>
+        </div>
+        <div class="dashActions">
+          <button class="btn btn--ghost" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+
+      <div class="dashGrid">
+        <div class="card balanceCard">
+          <div class="balanceCard__top">
+            <div>
+              <div class="muted small">Total Balance</div>
+              <div class="big">₹ <span id="totalBalance">0</span></div>
+            </div>
+            <div class="badge">SECURE</div>
+          </div>
+          <div class="divider"></div>
+          <div class="split">
+            <div class="split__item">
+              <div class="muted small">Savings</div>
+              <div class="mid">₹ <span id="savingsBalance">0</span></div>
+            </div>
+            <div class="split__item">
+              <div class="muted small">Checking</div>
+              <div class="mid">₹ <span id="checkingBalance">0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card transferCard">
+          <h3>Transfer Money</h3>
+          <form id="transferForm" class="form">
+            <div class="two">
+              <label>
+                <span>From</span>
+                <select id="fromAccount" required>
+                  <option value="savings">Savings</option>
+                  <option value="checking">Checking</option>
+                </select>
+              </label>
+              <label>
+                <span>To</span>
+                <select id="toAccount" required>
+                  <option value="checking">Checking</option>
+                  <option value="savings">Savings</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span>Amount (₹)</span>
+              <input type="number" id="amount" min="1" step="1" placeholder="e.g., 5000" required />
+            </label>
+
+            <button class="btn btn--primary" type="submit">Transfer</button>
+            <p class="error" id="transferError" aria-live="polite"></p>
+            <p class="success" id="transferSuccess" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="card quickCard">
+          <h3>Quick Actions</h3>
+          <div class="quickBtns">
+            <button class="btn btn--ghost" id="addCreditBtn">+ Credit ₹1000</button>
+            <button class="btn btn--ghost" id="addDebitBtn">- Debit ₹500</button>
+            <button class="btn btn--ghost" id="resetBtn">Reset Demo</button>
+          </div>
+          <p class="muted small">Credits/debits apply to Checking (demo).</p>
+        </div>
+      </div>
+
+      <div class="card txCard">
+        <div class="txTop">
+          <h3>Transactions</h3>
+          <div class="txControls">
+            <input id="txSearch" type="search" placeholder="Search: transfer / credit / debit"/>
+            <select id="txFilter">
+              <option value="all">All</option>
+              <option value="transfer">Transfers</option>
+              <option value="credit">Credits</option>
+              <option value="debit">Debits</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tableWrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Details</th>
+                <th class="right">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="txBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="backToSite">
+        <button class="btn btn--ghost" id="backToSiteBtn">← Back to Website</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
